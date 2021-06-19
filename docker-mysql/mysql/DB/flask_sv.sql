@@ -24,7 +24,7 @@ DROP TABLE IF EXISTS `account`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `account` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `account_name` varchar(64) NOT NULL,
+  `account_name` varchar(64) NOT NULL UNIQUE,
   `start_on` datetime NOT NULL,
   `end_on` datetime NOT NULL,
   `created_by` int DEFAULT NULL,
