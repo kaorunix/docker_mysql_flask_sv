@@ -119,14 +119,14 @@ CREATE TABLE `sprint` (
   `sprint_name` varchar(64) NOT NULL,
   `start_on` datetime NOT NULL,
   `end_on` datetime NOT NULL,
-  `created_by` int DEFAULT NULL,
-  `created_at` datetime DEFAULT NULL,
-  `updated_by` int DEFAULT NULL,
-  `updated_at` datetime DEFAULT NULL,
-  `status` int NOT NULL,
+  `created_by` varchar(64) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `updated_by` varchar(64) NOT NULL,
+  `updated_at` datetime NOT NULL,
+  `status` int DEFAULT 0,
   `velocity` int DEFAULT NULL,
-  `total_plan_time` int DEFAULT NULL,
-  `total_working_time` int DEFAULT NULL,
+  `total_plan_time` int DEFAULT 0,
+  `total_working_time` int DEFAULT 0,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
