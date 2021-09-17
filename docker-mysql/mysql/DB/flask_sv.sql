@@ -115,3 +115,27 @@ UNLOCK TABLES;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
 -- Dump completed on 2021-04-25 22:02:05
+
+
+DROP TABLE IF EXISTS `task_status2`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `task_status2` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `status_name` varchar(64) NOT NULL,
+  `background_color` varchar(512) DEFAULT NULL,
+  `created_by` int DEFAULT NULL,
+  `created_at` datetime DEFAULT NULL,
+  `updated_by` int DEFAULT NULL,
+  `updated_at` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `authentication`
+--
+
+LOCK TABLES `task_status2` WRITE;
+/*!40000 ALTER TABLE `authentication` DISABLE KEYS */;
+/*!40000 ALTER TABLE `authentication` ENABLE KEYS */;
+UNLOCK TABLES;
